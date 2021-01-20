@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:CTracker.Views"
+             x:Class="CTracker.AppShell"
+        xmlns:fontawesome="clr-namespace:Covid19India.Fonts" 
+       xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+       Shell.BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+    Shell.DisabledColor="{DynamicResource ShellDisabledColor}"
+    Shell.ForegroundColor="{DynamicResource ShellForegroundColor}"
+    Shell.NavBarHasShadow="False"
+    Shell.TabBarBackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+    Shell.TabBarDisabledColor="{DynamicResource ShellTabBarDisabledColor}"
+    Shell.TabBarForegroundColor="{DynamicResource ShellTabBarForegroundColor}"
+    Shell.TabBarUnselectedColor="{DynamicResource ShellTabBarUnselectedColor}"
+    Shell.TitleColor="{DynamicResource ShellTitleColor}"
+    FlyoutBackgroundColor="WhiteSmoke"
+       
+    Shell.UnselectedColor="{DynamicResource ShellUnselectedColor}">
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <magicGradients:GradientView VerticalOptions="FillAndExpand" >
+                    <magicGradients:GradientView.GradientSource>
+                        <magicGradients:CssGradientSource>
+                            <x:String>
+                                <![CDATA[
+                                 linear-gradient(135deg, transparent 0%, transparent 2%,rgba(153, 243, 62,0.6) 2%, rgba(153, 243, 62,0.6) 21%,transparent 21%, transparent 85%,rgba(213, 250, 34,0.6) 85%, rgba(213, 250, 34,0.6) 100%),linear-gradient(45deg, transparent 0%, transparent 18%,rgb(153, 243, 62) 18%, rgb(153, 243, 62) 31%,rgb(113, 239, 81) 31%, rgb(113, 239, 81) 44%,transparent 44%, transparent 93%,rgb(173, 246, 53) 93%, rgb(173, 246, 53) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255))
+                                    ]]>
+                            </x:String>
+                        </magicGradients:CssGradientSource>
+                    </magicGradients:GradientView.GradientSource>
+                </magicGradients:GradientView>
+                <Label Text="Covid Tracker" TextColor="Black" FontAttributes="Bold"
+                    FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Ver. 1.0" TextColor="Black" FontAttributes="Bold" TranslationY="130" TranslationX="280"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+   
+    <FlyoutItem Title="Counter Meter">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Color="Black"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.ChartArea}"
+                    Size="20" />
+        </FlyoutItem.Icon>
+        <Tab>
+            <ShellContent Title="World">
+
+                <views:WorldView/>
+            </ShellContent>
+            
+            <ShellContent Title="Country">
+                <views:CountryView/>
+            </ShellContent>
+            
+        </Tab>
+
+    </FlyoutItem>
+    <FlyoutItem Title="Listview">
+        <Tab>
+            <ShellContent Title="Countries">
+                <views:CountriesView/>
+
+            </ShellContent>
+            <ShellContent Title="States">
+                <views:StateView/>
+            </ShellContent>
+            
+        </Tab>
+        
+    </FlyoutItem>
+    
+    
+    <ShellContent Title="Home">
+        <ShellContent.Icon>
+            <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Color="Black"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Home}"
+                    Size="20" />
+        </ShellContent.Icon>
+        <views:Home/>
+    </ShellContent>
+    <ShellContent Title="Settings">
+        <ShellContent.Icon>
+
+            <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                Color="Black"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.InfoCircle}"
+                    Size="20" />
+        </ShellContent.Icon>
+        
+        <views:Settings/>
+    </ShellContent>
+    
+</Shell>
