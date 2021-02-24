@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CTracker.Theme.LightTheme"
+                     xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+
+
+    <OnPlatform x:Key="FontAvenir" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Avenir Book.ttf#Avenir Book" />
+        <On Platform="iOS" Value="Avenir Book" />
+    </OnPlatform>
+    <OnPlatform x:Key="FontGilroyRegular" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Gilroy-Regular.ttf#Gilroy-Regular" />
+        <On Platform="iOS" Value="Gilroy-Regular" />
+    </OnPlatform>
+    <OnPlatform x:Key="FontGilroyMedium" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Gilroy-Medium.ttf#Gilroy-Medium" />
+        <On Platform="iOS" Value="Gilroy-Medium" />
+    </OnPlatform>
+    <OnPlatform x:Key="Fontello" x:TypeArguments="x:String">
+        <On Platform="Android" Value="fontello.ttf#Regular" />
+        <On Platform="iOS" Value="fontello" />
+    </OnPlatform>
+    <Style x:Key="fontGilroyMedium12" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="#000000" />
+    </Style>
+    <Style x:Key="lbHeaderAndroid" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    <Style x:Key="lbLastUpdateCountry" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+
+
+    <!--  global  -->
+    <Color x:Key="PrimaryColor">White</Color>
+    <Color x:Key="SecondaryColor">Black</Color>
+    <Color x:Key="TertiaryColor">Gray</Color>
+    <Color x:Key="AccentColor">#d50000</Color>
+    <Color x:Key="PageBackgroundColor">#efefef</Color>
+    <Color x:Key="ComponentColor">White</Color>
+    <Color x:Key="ImageBackgroundColor">#bcbcbc</Color>
+    <Color x:Key="SettingsBackgroundColor">White</Color>
+
+    <!--  Shell  -->
+    <Color x:Key="ShellDisabledColor">#8e8e8e</Color>
+    <Color x:Key="ShellBackgroundColor">#efefef</Color>
+    <Color x:Key="ShellForegroundColor">Black</Color>
+    <Color x:Key="ShellTabBarBackgroundColor">White</Color>
+    <Color x:Key="ShellTabBarDisabledColor">#8e8e8e</Color>
+    <Color x:Key="ShellTabBarForegroundColor">Black</Color>
+    <Color x:Key="ShellTabBarUnselectedColor">#8e8e8e</Color>
+    <Color x:Key="ShellTitleColor">#d50000</Color>
+    <Color x:Key="ShellUnselectedColor">#8e8e8e</Color>
+
+    <!--  Shimmer  -->
+    <Color x:Key="SkeletonColor">#aeaeae</Color>
+
+    <!--  SearchBar  -->
+    <Color x:Key="SearcBarBackgroundColor">GhostWhite</Color>
+
+    <Style x:Key="Confirm" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#4998F4" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+    <Style x:Key="Recover" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#13E015" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+    <Style x:Key="Death" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#F4195D" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+
+    <Style x:Key="ActiveStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#ff9732"/>
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+
+    <Style x:Key="Critical" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#ff686c"/>
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+
+    <Style x:Key="Tests" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#c8a5fd"/>
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+
+    <Style x:Key="affect" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#b491b2"/>
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+
+    <Style x:Key="FrameTotal" TargetType="pancake:PancakeView">
+        <Setter Property="BackgroundColor" Value="GhostWhite" />
+        <Setter Property="CornerRadius" Value="10" />
+       
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="lbLastUpdateGlobal" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="lbRefresh" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#4998F4" />
+    </Style>
+
+
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Theme/Global.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+
+</ResourceDictionary>
