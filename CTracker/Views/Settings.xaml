@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CTracker.Views.Settings"
+              BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+              xmlns:fontawesome="clr-namespace:Covid19India.Fonts"
+             Visual="Material">
+
+    <Shell.TitleView>
+        <Grid BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}">
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Margin="0,0,55,0"
+                Text="SETTINGS"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+
+
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Grid.Row="2" Spacing="5">
+
+                <Label Margin="10,0,0,0"  Text="MODE" FontSize="15"/>
+
+                <Grid
+                        Padding="10"
+                        BackgroundColor="{DynamicResource PageBackgroundColor}"
+                        ColumnSpacing="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemeChangeCommand}" CommandParameter="LightTheme" />
+                    </Grid.GestureRecognizers>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                            Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="25"
+                           Text="{x:Static fontawesome:FontAwesomeIcons.Sun}"
+                            VerticalOptions="Center"  />
+
+
+
+                    <Label
+                            Grid.Column="1"
+                            FontSize="16"
+                            Text="Light"
+                            VerticalOptions="Center" />
+
+                    <Label
+                            Grid.Column="2"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="18"
+                            IsVisible="{Binding IsLightTheme}"
+                          
+                            VerticalOptions="Center" />
+
+                </Grid>
+
+                <Grid
+                        Padding="10"
+                        BackgroundColor="{DynamicResource PageBackgroundColor}"
+                        ColumnSpacing="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemeChangeCommand}" CommandParameter="DarkTheme" />
+                    </Grid.GestureRecognizers>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                            Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="25"
+                          Text="{x:Static fontawesome:FontAwesomeIcons.Moon}"
+                            VerticalOptions="Center" />
+
+
+                    <Label
+                            Grid.Column="1"
+                            FontSize="16"
+                            Text="Dark"
+                            VerticalOptions="Center" />
+
+                    <Label
+                            Grid.Column="2"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="18"
+                            IsVisible="{Binding IsDarkTheme}"
+                           
+                            VerticalOptions="Center" />
+
+
+                </Grid>
+
+                <!-- <Grid
+                        Padding="10"
+                        BackgroundColor="{DynamicResource PageBackgroundColor}"
+                        ColumnSpacing="15">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemeChangeCommand}" CommandParameter="SystemPreferred" />
+                    </Grid.GestureRecognizers>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                            Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="20"
+                 Text="{x:Static fontawesome:FontAwesomeIcons.Cogs}"
+                    VerticalOptions="Center" />
+
+
+                    <Label
+                            Grid.Column="1"
+                            FontSize="16"
+                            Text="System Preferred"
+                            VerticalOptions="Center" />
+
+                    <Label
+                            Grid.Column="2"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="18"
+                           
+                        Text="{x:Static fontawesome:FontAwesomeIcons.Check}"
+                          IsVisible="{Binding IsSystemPreferredTheme}"
+                            VerticalOptions="Center" />
+
+                </Grid>-->
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="21" HorizontalOptions="Center" >
+                        <Label FontSize="18"  FontAttributes="Bold" Text="Developed with ❤ by Satyajeet" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label FontSize="15" Text="Open Source Software" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

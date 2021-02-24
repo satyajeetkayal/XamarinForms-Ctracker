@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+             
+                Visual="Material"
+             x:Class="CTracker.Views.Home">
+
+    <Shell.TitleView>
+        <Grid BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}">
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="HOME"
+                Margin="0,0,70,0"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+
+
+
+    <ContentPage.Content>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Margin="10" Spacing="20">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HorizontalOptions="Start"
+                    Text="COVID-19 | Coronavirus Disease" />
+                <Frame Style="{DynamicResource DefaultFrame}">
+
+
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="22"
+                            Text="About" />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="Coronavirus disease (COVID-19) is an infectious disease caused by a new virus." />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing." />
+                    </StackLayout>
+                </Frame>
+                <Frame Style="{DynamicResource DefaultFrame}">
+
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="22"
+                            Text="How it spreads" />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze." />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="It also spreads when a person touches a surface or object that has the virus on it, then touches their eyes, nose, or mouth." />
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,0,0,20" Style="{DynamicResource DefaultFrame}">
+
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="22"
+                            Text="Symptoms" />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="People may be sick with the virus for 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness, and dry cough." />
+                        <Label
+                            FontSize="18"
+                            LineBreakMode="WordWrap"
+                            LineHeight="1.2"
+                            Text="More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be more vulnerable to becoming severely ill." />
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout>
+                    <Label Margin="10,0"
+                             FontSize="20"
+                             FontAttributes="Bold"
+                             Text="Emergency Guided" />
+                </StackLayout>
+
+                <Frame Style="{DynamicResource DefaultFrame}">
+
+                    <StackLayout Margin="5,5" Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="StartAndExpand" Spacing="0">
+                            <Label
+                            FontSize="18"
+                           
+                            Text="How to Avoid" />
+                            <Label
+                            FontSize="20"
+                            LineHeight="1.2"
+                            Text="Coronavirus " />
+
+                            <ImageButton
+                            x:Name="btnVoid"
+                            Aspect="AspectFit"
+                                Clicked="btnVoid_Clicked"
+                               
+                            BackgroundColor="Transparent"
+                            HeightRequest="90"
+                            HorizontalOptions="StartAndExpand"
+                            Source="how"
+                            
+                            VerticalOptions="Center">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                        </StackLayout>
+                        <Image
+                        Aspect="AspectFit"
+                         HeightRequest="90"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="human" />
+                    </StackLayout>
+
+
+                </Frame>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>

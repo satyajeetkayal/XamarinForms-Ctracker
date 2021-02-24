@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:b="clr-namespace:Xam.Behaviors;assembly=Xam.Behaviors" 
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="CTracker.Views.WorldView"
+              xmlns:skeleton="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
+             xmlns:c="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+              BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+             Visual="Material">
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand Command="{Binding AppearingCommand}" EventName="Appearing" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
+    
+    <Shell.TitleView>
+        <Grid BackgroundColor="{DynamicResource ShellTabBarBackgroundColor}">
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Margin="0,0,65,0"
+                Text="COUNTER"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+
+    
+
+
+
+   
+
+        
+        <StackLayout>
+            
+            <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}" RefreshColor="Red" BackgroundColor="WhiteSmoke">
+                <ScrollView>
+
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+
+                       
+
+                        <Label Grid.Row="3"
+                              Grid.Column="0"
+                           Margin="0,0,0,0"
+                          HorizontalTextAlignment="Start"
+                           HorizontalOptions="StartAndExpand" 
+                           Text="Last Update:"
+                               FontSize="15"
+                           Style="{DynamicResource lbLastUpdateGlobal}" />
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="4"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}" HorizontalTextAlignment="Center" FontSize="20" Text="Confirmed" />
+                                <Label
+                                              Style="{StaticResource Confirm}"
+                                        HorizontalTextAlignment="Center"      Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="5"
+                                      Grid.Column="0"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Recovered" />
+                                <Label
+                                              Style="{StaticResource Recover}"
+                                       HorizontalTextAlignment="Center"       Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="5"
+                                      Grid.Column="1"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Deaths" />
+                                <Label
+                                              Style="{StaticResource Death}"
+                                     HorizontalTextAlignment="Center" Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="6"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Active" />
+                                <Label
+                                              Style="{StaticResource ActiveStyle}"
+                                    HorizontalTextAlignment="Center"          Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="7"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Today Cases" />
+                                <Label
+                                              Style="{StaticResource Confirm}"
+                                      HorizontalTextAlignment="Center"        Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="8"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Today Recovered" />
+                                <Label
+                                              Style="{StaticResource Recover}"
+                                    HorizontalTextAlignment="Center"          Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="9"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Today Deaths" />
+                                <Label
+                                              Style="{StaticResource Death}"
+                                       HorizontalTextAlignment="Center"      Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="10"
+                                      Grid.Column="0"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Critical" />
+                                <Label
+                                              Style="{StaticResource Critical}"
+                                      HorizontalTextAlignment="Center"        Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="10"
+                                      Grid.Column="1"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Tests" />
+                                <Label
+                                              Style="{StaticResource Tests}"
+                                     HorizontalTextAlignment="Center"         Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                        <pancakeview:PancakeView
+                                       Grid.Row="11"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0,12,0,0"
+                                      Style="{DynamicResource FrameTotal}">
+                            <StackLayout
+                                         Padding="8,15"
+                                             HorizontalOptions="CenterAndExpand"
+                                             VerticalOptions="Center">
+                                <Label Style="{DynamicResource fontGilroyMedium12}"  HorizontalTextAlignment="Center" FontSize="20" Text="Affected Countries" />
+                                <Label
+                                              Style="{StaticResource affect}"
+                                     HorizontalTextAlignment="Center"         Text="{Binding Cases}" />
+                            </StackLayout>
+                        </pancakeview:PancakeView>
+
+                    </Grid>
+
+
+                </ScrollView>
+            </RefreshView>
+        </StackLayout>
+
+  
+</ContentPage>
