@@ -11,11 +11,14 @@ https://1drv.ms/u/s!AonVuqdJuR_sa2iM756vgjRVx1I?e=cE96VP
 2. Xamarin Android
 3. PancakeView
 4. Newtonsoft Json
-5. Rg.Popup
+5. Rg.Plugins.Popup
 6. Xamarin Essentials
 7. Xam.Behavior
 8. .NetHttp
 9. Skeleton
+10. FFImageLoading Forms
+11. CrossCurrent Activity
+12. 
 ```
 
 
