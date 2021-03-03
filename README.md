@@ -4,8 +4,11 @@ Build a Basic Cross platform Native App "CTracker"  using C# language along with
 ## The following Technologies were used to develop this application.
 ``
 Xamarin Forms
+
 Xamarin Android
+
 PancakeView
+
 Newtonsoft Json
 
 ``
